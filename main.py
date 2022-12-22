@@ -8,17 +8,18 @@ scorer_a = 'Ruud Gullit'
 scorer_b = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
-scorers =  f'{scorer_a} {str(goal_0)}, {scorer_b} {str(goal_1)}'
+
+scorers =  scorer_a + ' ' + str(goal_0) + ',' + ' ' + scorer_b + ' ' + str(goal_1)
 report = f'{scorer_a} scored in the {goal_0}nd minute\n{scorer_b} scored in the {goal_1}th minute'
+
 player = 'Ruud Gullit'
-first_name_find = player[player.find('')]
-first_name_slice = slice(1,4)
-first_name = first_name_find + player[first_name_slice]
-last_name_find = player[player.find('')+5]
-last_name_slice = slice(6,11)
+
+first_name = player[:player.find(' ')]
+last_name = player[player.find(' ')+1:]
 last_name_len = len(player[5:])
-last_name = last_name_find + player[last_name_slice]
-name_short = f'{player[0]}. {player[5:]}'
-chant = f'{first_name}! {first_name}! {first_name}! {first_name}!'
-good_chant = chant != chant[-1]
-print(last_name)
+name_short = f'{player[0]}. { last_name}'
+
+chant_space = f'{first_name}! ' *len(first_name)
+chant = chant_space[:-1]
+good_chant = chant[-1] != ' '
+print(chant)
