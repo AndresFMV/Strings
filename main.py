@@ -22,4 +22,4 @@ name_short = f'{player[0]}. { last_name}'
 chant_space = f'{first_name}! ' *len(first_name)
 chant = chant_space[:-1]
 good_chant = chant[-1] != ' '
-print(chant)
+print(good_chant)
