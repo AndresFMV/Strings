@@ -16,10 +16,11 @@ player = 'Ruud Gullit'
 
 first_name = player[:player.find(' ')]
 last_name = player[player.find(' ')+1:]
-last_name_len = len(player[5:])
+last_name_len = len(last_name)
 name_short = f'{player[0]}. { last_name}'
 
 chant_space = f'{first_name}! ' *len(first_name)
 chant = chant_space[:-1]
 good_chant = chant[-1] != ' '
 print(good_chant)
+print(last_name_len)
