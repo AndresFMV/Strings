@@ -23,4 +23,3 @@ chant_space = f'{first_name}! ' *len(first_name)
 chant = chant_space[:-1]
 good_chant = chant[-1] != ' '
 print(good_chant)
-print(last_name_len)
